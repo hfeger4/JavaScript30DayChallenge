@@ -32,6 +32,18 @@ function findMatches(wordToMatch, cities){
   });
 }
 
+function displayMatches(){
+  const matchArray = findMatches(this.value, cities);
+  console.log(matchArray);
+}
+
+searchInput = document.querySelector('.search');
+suggestions = document.querySelector('.suggestions')
+
+searchInput.addEventListener('change', displayMatches);
+searchInput.addEventListener('keyup', displayMatches);
+
+
 </script>
   </body>
 </html>
